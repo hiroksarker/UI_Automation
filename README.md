@@ -16,7 +16,7 @@ JUnit 5 is the next generation of JUnit. The goal is to create an up-to-date fou
 # Pre-requisites
 - <a href="https://java.com/en/download/manual.jsp" target="_blank">Java</a>
 - <a href="https://maven.apache.org/download.cgi" target="_blank">Maven</a>
-- <a href="https:https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ</a>
+- <a href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ</a>
 
 Using tests in your project
 ----------------------------------
