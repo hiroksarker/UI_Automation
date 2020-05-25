@@ -1,0 +1,7 @@
+application_url: https://the-internet.herokuapp.com/login
+valid_user:
+  - username: tomsmith
+  - password: SuperSecretPassword!
+invalid_user:
+  - username: test_invalid
+  - password: password_invalid
