@@ -7,7 +7,6 @@ import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Date;
 
 public class JUnitListeners extends RunListener {

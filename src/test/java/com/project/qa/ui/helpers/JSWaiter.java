@@ -17,6 +17,7 @@ public class JSWaiter {
     private static JavascriptExecutor jsExec;
 
     //Get the driver
+    @Deprecated
     public static void setDriver(WebDriver driver) {
         jsWaitDriver = driver;
         jsWait = new WebDriverWait(jsWaitDriver, 10);

@@ -4,7 +4,6 @@ import com.project.qa.ui.enums.DriverType;
 import com.project.qa.ui.enums.EnvironmentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -84,6 +83,8 @@ public class ConfigFileReader {
         String browserName = properties.getProperty("browser");
         if (browserName == null || browserName.equals("chrome")) return DriverType.CHROME;
         else if (browserName.equalsIgnoreCase("firefox")) return DriverType.FIREFOX;
+        else if (browserName.equalsIgnoreCase("opera")) return DriverType.OPERA;
+        else if (browserName.equalsIgnoreCase("safari")) return DriverType.SAFARI;
         else if (browserName.equals("iexplorer")) return DriverType.INTERNETEXPLORER;
         else {
             LOGGER.error("browser name is not found in config.properties file");

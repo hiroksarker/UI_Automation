@@ -37,7 +37,7 @@ public class ExcelReader {
 
         try (FileInputStream fileInputStream = new FileInputStream(excelFilePath)) {
             Workbook workbook;
-            if (excelFilePath.endsWith(".xls")) workbook = new HSSFWorkbook(fileInputStream);
+            if (excelFilePath.endsWith(".xls") || excelFilePath.endsWith(".xlsx")) workbook = new HSSFWorkbook(fileInputStream);
             else workbook = new XSSFWorkbook(fileInputStream);
             Sheet sheet = workbook.getSheet(sheetName);
             int totalRows = sheet.getLastRowNum() + 1;

@@ -12,7 +12,7 @@ public interface AlertHelper {
     Logger LOGGER = LoggerFactory.getLogger(AlertHelper.class);
 
     /**
-     * Method to swith to Javascript alert
+     * Method to switch to Javascript alert
      * @param driver
      * @return Alert
      */
