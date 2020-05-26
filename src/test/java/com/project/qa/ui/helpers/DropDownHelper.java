@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public interface DropDownHelper {
 
@@ -98,5 +99,17 @@ public interface DropDownHelper {
             valueList.add(ele.getText());
         }
         return valueList;
+    }
+
+    /**
+     * Method to get selected option
+     * @param element
+     * @return select item from list
+     */
+    default List<String> getSelectedOptions(WebElement element){
+        Select select = new Select(element);
+        List<WebElement> selectedElements = select.getAllSelectedOptions();
+        LOGGER.info("select item from list: " + selectedElements);
+        return selectedElements.stream().map(e -> e.getText()).collect(Collectors.toList());
     }
 }
