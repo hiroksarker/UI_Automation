@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/hiroksarker/UI_Automation/workflows/Build%20and%20Test/badge.svg)](https://github.com/hiroksarker/UI_Automation/actions)
+![Build and Test](https://github.com/hiroksarker/UI_Automation/workflows/Build%20and%20Test/badge.svg?branch=master)
 
 # UI Automation
 Selenium, Cucumber, JUnit
