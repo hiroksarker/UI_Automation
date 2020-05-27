@@ -1,0 +1,2 @@
+N.B.: Always should be updated all browser driver.
+* Default Driver (Chrome)
