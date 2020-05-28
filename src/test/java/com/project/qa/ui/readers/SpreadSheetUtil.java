@@ -1,13 +1,8 @@
 package com.project.qa.ui.readers;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,7 +34,7 @@ public class SpreadSheetUtil {
      * @param name
      */
     public void switchToSheet(String name){
-        try(var workbooks = WorkbookFactory.create(spreadsheet)){
+        try(Workbook workbooks = WorkbookFactory.create(spreadsheet)){
             currentSheet = workbooks.getSheet(name);
             currentSheet.getRow(0).forEach(cell ->{
                 columns.put(cell.getStringCellValue(), cell.getColumnIndex());
@@ -57,7 +52,7 @@ public class SpreadSheetUtil {
      * @return get cell data as string value
      */
     public String getCellData(String column, int row){
-        var dataRow = currentSheet.getRow(row);
+        Row dataRow = currentSheet.getRow(row);
         return getCellDataAsString(dataRow.getCell(columns.get(column)));
     }
 
