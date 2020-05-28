@@ -29,6 +29,7 @@ public class JSONReader {
      * @param key
      * @return value
      */
+    @Deprecated
     public String readValueByKey(String testcase, String key) {
         JsonParser jsonParser = new JsonParser();
         String value = null;
